@@ -8,11 +8,10 @@ USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36
 ROBOTSTXT_OBEY = False
 
 LOG_LEVEL = 'DEBUG'
-LOG_FILE = 'name.log'
+LOG_FILE = '../json/name.log'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 16
-
 DOWNLOAD_DELAY = 1
 # The download delay setting will honor only one of:
 CONCURRENT_REQUESTS_PER_DOMAIN = 16
@@ -31,33 +30,27 @@ CONCURRENT_REQUESTS_PER_IP = 16
 #}
 
 # Enable or disable spider middlewares
-# See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
 #    'nature.middlewares.NatureSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
-# See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
 #    'nature.middlewares.NatureDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
-# See https://doc.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 
 # Configure item pipelines
-# See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'nature.pipelines.NaturePipeline': 300,
    'nature.pipelines.MongoDBPipeline': 301,
-
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
-# See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY = 5
@@ -79,5 +72,6 @@ ITEM_PIPELINES = {
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
-MONGODB_DB = "Spider2"
-MONGODB_COLLECTION = "coll"
+MONGODB_DB = "xuguoliang"
+MONGODB_COLLECTION = "xuguoliang"
+

@@ -11,7 +11,7 @@ class NatureItem(scrapy.Item):
     abstract = Field()
     doi = Field()
     authors = Field()
-    _if = Field()
+    if_2017 = Field()
     type = Field()
     issn = Field()
 
