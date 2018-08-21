@@ -2,8 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38461850-b8a8-4468-b9f5-98238637466b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../qisu/App/Applications.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qisu/App/Pro_TE_Maket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qisu/App/Submission.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qisu/file/Application_ApplicationDocs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qisu/file/Pro_TE_mark_makelookup.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qisu/file/Submission_Submission_lookup_SubmissionProperty.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/commands/crawlall.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/Cell/commands/crawlall.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/commands/text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/Cell/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/json/cell.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/json/name.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/Cell/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/Cell/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/spiders/cell.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/Cell/spiders/cell.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/spiders/chromedriver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/spiders/scarm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cell/Cell/spiders/sigle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/Cell/spiders/sigle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/json/d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/json/name.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/academic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/academic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/advances.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/advances.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/bmj.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/bmj.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/bmj1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/bmj1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/cancerdiscovery.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/cancerdiscovery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/clincancerres.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/clincancerres.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/diabetes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/diabetes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/immunology.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/immunology.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/jamanetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/jamanetwork.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/lww.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/lww.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/nejm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/nejm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/sciencemag.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/sciencemag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/stm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/stm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/thelancet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/thelancet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/.idea/nature.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/.idea/nature.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/nature/json/immunology.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/json/immunology.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/nature/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/nature/json/immunology.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/nature/json/name.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/nature/json/text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/nature/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/nature/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/nature/spiders/immunology.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/spiders/immunology.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,57 +62,67 @@
     <session id="-344072692">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
           <entry key="json" value="68" />
-          <entry key="log" value="5" />
-          <entry key="py" value="8069" />
+          <entry key="log" value="18" />
+          <entry key="py" value="8155" />
           <entry key="txt" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="68" />
-          <entry key="Log" value="5" />
+          <entry key="Log" value="18" />
           <entry key="PLAIN_TEXT" value="48" />
-          <entry key="Python" value="8069" />
+          <entry key="Python" value="8155" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="2" />
-          <entry key="json" value="43" />
-          <entry key="log" value="25" />
-          <entry key="py" value="294" />
+          <entry key="json" value="45" />
+          <entry key="log" value="31" />
+          <entry key="py" value="320" />
           <entry key="txt" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="43" />
-          <entry key="Log" value="25" />
+          <entry key="JSON" value="45" />
+          <entry key="Log" value="31" />
           <entry key="PLAIN_TEXT" value="36" />
-          <entry key="Python" value="294" />
+          <entry key="Python" value="320" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/sciencemag.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Jamanetwork/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+            <state relative-caret-position="202">
+              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/cancerdiscovery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -74,49 +131,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/stm.py">
+        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/academic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/thelancet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-181">
-              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-              <folding>
-                <element signature="e#1#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/immunology.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/jamanetwork.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -124,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jamanetwork/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="726">
+              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -133,44 +151,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/bmj1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/lww.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="22" selection-start-line="22" selection-end-line="31" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/robotics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/nejm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+            <state relative-caret-position="1232">
+              <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
               <folding>
-                <element signature="e#1#10#0" expanded="true" />
-                <marker date="1533803784029" expanded="true" signature="558:647" ph="..." />
+                <marker date="1534238921282" expanded="true" signature="563:653" ph="..." />
               </folding>
             </state>
           </provider>
@@ -187,10 +174,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>10.1097/SLA.0000000000002662</find>
-      <find>https://jamanetwork.com/journals/jamapediatrics/fullarticle/2687934'</find>
       <find>None</find>
-      <find>\u2009</find>
       <find>issn</find>
       <find>_if</find>
       <find>http://diabetes.diabetesjournals.org</find>
@@ -217,6 +201,9 @@
       <find>&quot;pub_date&quot;: &quot; &quot;</find>
       <find>'abstract': ''</find>
       <find>item['if_2017'] = &quot;&quot;</find>
+      <find>$USER_HOME$/anaconda3/lib</find>
+      <find>/2009</find>
+      <find>\u2009</find>
     </findStrings>
     <replaceStrings>
       <replace>if_2017</replace>
@@ -245,7 +232,6 @@
         <option value="$PROJECT_DIR$/Jamanetwork/commands/crawlall.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/json/d.json" />
         <option value="$PROJECT_DIR$/Jamanetwork/middlewares.py" />
-        <option value="$PROJECT_DIR$/Jamanetwork/items.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/commands/null.txt" />
         <option value="$PROJECT_DIR$/Jamanetwork/commands/new_text.txt.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/commands/Map.txt" />
@@ -255,30 +241,31 @@
         <option value="$PROJECT_DIR$/Jamanetwork/commands/text.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/json/c.json" />
         <option value="$PROJECT_DIR$/Jamanetwork/json/text.py" />
-        <option value="$PROJECT_DIR$/Jamanetwork/settings.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/robotics.py" />
-        <option value="$PROJECT_DIR$/Jamanetwork/spiders/sciencemag.py" />
-        <option value="$PROJECT_DIR$/Jamanetwork/spiders/academic.py" />
+        <option value="$PROJECT_DIR$/Jamanetwork/items.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/advances.py" />
+        <option value="$PROJECT_DIR$/Jamanetwork/spiders/bmj1.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/bmj.py" />
-        <option value="$PROJECT_DIR$/Jamanetwork/spiders/cancerdiscovery.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/clincancerres.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/diabetes.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/immunology.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/jamanetwork.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/lww.py" />
-        <option value="$PROJECT_DIR$/Jamanetwork/spiders/nejm.py" />
+        <option value="$PROJECT_DIR$/Jamanetwork/spiders/sciencemag.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/stm.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/spiders/thelancet.py" />
         <option value="$PROJECT_DIR$/Jamanetwork/pipelines.py" />
-        <option value="$PROJECT_DIR$/Jamanetwork/spiders/bmj1.py" />
+        <option value="$PROJECT_DIR$/Jamanetwork/spiders/nejm.py" />
+        <option value="$PROJECT_DIR$/Jamanetwork/spiders/cancerdiscovery.py" />
+        <option value="$PROJECT_DIR$/Jamanetwork/spiders/academic.py" />
+        <option value="$PROJECT_DIR$/Jamanetwork/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="738" />
-    <option name="y" value="23" />
-    <option name="width" value="1400" />
+    <option name="x" value="488" />
+    <option name="y" value="27" />
+    <option name="width" value="1397" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -298,18 +285,6 @@
               <item name="Jamanetwork" type="b2602c69:ProjectViewProjectNode" />
               <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
               <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jamanetwork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
-              <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jamanetwork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
-              <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -476,17 +451,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="738" y="23" width="1400" height="877" extended-state="0" />
+    <frame x="488" y="27" width="1397" height="877" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21174765" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14098836" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.29044586" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.34908137" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32866243" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.328084" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.32939634" />
       <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.22802548" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39398086" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -518,6 +493,9 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -623,23 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/json/text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#1#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3410">
@@ -647,31 +608,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/settings.py">
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1053">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/json/name.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-582910">
-          <caret line="35728" column="26" selection-start-line="35728" selection-start-column="26" selection-end-line="35728" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/academic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/advances.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="67" column="18" lean-forward="true" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        <state relative-caret-position="380">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -680,63 +627,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/bmj.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="378">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
-            <marker date="1533803784006" expanded="true" signature="422:424" ph="..." />
+            <marker date="1533868316571" expanded="true" signature="428:431" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/cancerdiscovery.py">
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/bmj1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+        <state relative-caret-position="300">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#1#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/clincancerres.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="356">
+          <caret line="66" column="18" lean-forward="true" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/diabetes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        <state relative-caret-position="334">
+          <caret line="65" column="29" lean-forward="true" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
           <folding>
             <element signature="e#1#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/nejm.py">
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/jamanetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        <state relative-caret-position="180">
+          <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
           <folding>
-            <element signature="e#1#10#0" expanded="true" />
-            <marker date="1533803784029" expanded="true" signature="558:647" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/lww.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/robotics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        <state relative-caret-position="290">
+          <caret line="56" column="31" lean-forward="true" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/sciencemag.py">
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/stm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+        <state relative-caret-position="356">
+          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/immunology.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="68" column="25" lean-forward="true" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -745,75 +711,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/thelancet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#1#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/immunology.py">
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/sciencemag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        <state relative-caret-position="202">
+          <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/json/d.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55449">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/jamanetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/json/d.json" />
     <entry file="file://$PROJECT_DIR$/Jamanetwork/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="726">
+          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/lww.py">
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/nejm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="22" selection-start-line="22" selection-end-line="31" selection-end-column="17" />
+        <state relative-caret-position="1232">
+          <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+          <folding>
+            <marker date="1534238921282" expanded="true" signature="563:653" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/cancerdiscovery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/stm.py">
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/academic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jamanetwork/spiders/bmj1.py">
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/json/name.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="210">
+          <caret line="18370" column="16" lean-forward="true" selection-start-line="18370" selection-start-column="16" selection-end-line="18370" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/json/text.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="45">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jamanetwork/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>

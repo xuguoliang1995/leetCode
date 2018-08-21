@@ -8,9 +8,9 @@ def strip_tag(str_s):
     new_dr = ""
     for s in str_s:
         if s:
-            s = s.replace('\n'," ").replace('\\u2009',"").replace('\xa0',"").replace('\u2005',"")
-            fr = re.compile(r'<[^>]+>',re.S)
-            dr = fr.sub('',s)
+            s = s.replace('\n', " ").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "")
+            fr = re.compile(r'<[^>]+>', re.S)
+            dr = fr.sub('', s)
             for i in dr:
                 new_dr = new_dr + i
     return new_dr
@@ -18,8 +18,8 @@ def strip_tag(str_s):
 
 def tranfrom_date(t):
     if t:
-        year,month,day = t.split('/')
-        return '%s-%s-%s' % (year,month,day)
+        year, month, day = t.split('/')
+        return '%s-%s-%s' % (year, month, day)
     return ""
 
 
@@ -28,7 +28,7 @@ def handler_abstract(extract_list):
     if extract_list:
         for i in extract_list:
             new_str = new_str + i
-            new_str.replace('\n','')
+            new_str.replace('\n', '')
         return new_str
     return ""
 
@@ -37,11 +37,12 @@ class ImmunologySpider(scrapy.Spider):
     name = 'immunology'
     # allowed_domains = ['advances.sciencemag.org']
     start_urls = [
-                 'http://immunology.sciencemag.org',
-                  ]
+        'http://immunology.sciencemag.org',
+    ]
 
     def parse(self, response):
-        detail_urls = response.xpath('//article//h3//a/@href').extract() or response.xpath('//article//h2//a/@href').extract()
+        detail_urls = response.xpath('//article//h3//a/@href').extract() or response.xpath(
+            '//article//h2//a/@href').extract()
         for detail_url in detail_urls:
             header_url = 'http://immunology.sciencemag.org'
             request_url = header_url + detail_url
@@ -65,4 +66,5 @@ class ImmunologySpider(scrapy.Spider):
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract() or ""
         item['if_2017'] = 0.001
         item['issn'] = '2470-9468'
+        item["is_pubmed"] = 0
         yield item

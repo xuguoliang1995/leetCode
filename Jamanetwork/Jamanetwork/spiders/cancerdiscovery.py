@@ -8,7 +8,7 @@ def strip_tag(str_s):
     new_dr = ""
     for s in str_s:
         if s:
-            s = s.replace('\n', " ").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "")
+            s = s.replace('\n', "").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "")
             fr = re.compile(r'<[^>]+>', re.S)
             dr = fr.sub('', s)
             for i in dr:
@@ -39,6 +39,7 @@ class CancerdiscoverySpider(scrapy.Spider):
         'http://cancerdiscovery.aacrjournals.org/content/early/by/section?utm_source=early&utm_medium=dropdown&utm_campaign=menu',
         'http://cancerdiscovery.aacrjournals.org/content/8/7?utm_source=current&utm_medium=dropdown&utm_campaign=menu&current-issue=y',
     ]
+
     def parse(self, response):
         detail_urls = response.xpath('//div[@class="pane-content"]//div[@class="article-title"]//a//@href').extract()
         for detail_url in detail_urls:
@@ -61,6 +62,5 @@ class CancerdiscoverySpider(scrapy.Spider):
         item['doi'] = response.xpath('//meta[@name="DC.Identifier"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="citation_author"]/@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
+        item["is_pubmed"] = 0
         yield item
-
-

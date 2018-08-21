@@ -43,7 +43,7 @@ class MongoDBPipeline(object):
         self.collection = db[settings['MONGODB_COLLECTION']]
         self.init_count = self.collection.find().count()
         self.count_insert = 0
-        self.count_update = 0
+
     def process_item(self,item,spider):
         valid = True
         for data in item:
@@ -63,6 +63,7 @@ class MongoDBPipeline(object):
                         'if_2017': item["if_2017"],
                         'issn': item["issn"],
                         # 'AffiliationInfo': item[""],
+                        "is_pubmed" : 0,
                         "created_at": datetime.datetime.utcnow(),
                         "updated_at": datetime.datetime.utcnow(),
                     }
@@ -92,11 +93,11 @@ class MongoDBPipeline(object):
                      #            'Item update to MongoDB database %s/%s/%s' % (
                      #             settings['MONGODB_DB'], settings['MONGODB_COLLECTION'],item['doi']),
                      #             level=log.DEBUG, spider=spider)
-                     # self.count_update = self.count_update + 1
+
         last_count = self.init_count + self.count_insert
-        # print("&"*40,'数据库更新了%d' % self.count_update)
-        print("&"*40,'数据库新插入了%d' % self.count_insert)
-        print("&"*40,'数据库总共有%d' % last_count)
+        print("&" * 40, '数据库更新了%d' % (last_count - self.count_insert))
+        print("&" * 40, '数据库新插入了%d' % self.count_insert)
+        print("&" * 40, '数据库总共有%d' % last_count)
         return item
 
 

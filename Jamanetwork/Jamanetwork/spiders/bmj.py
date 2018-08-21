@@ -8,12 +8,13 @@ def strip_tag(str_s):
     new_dr = ""
     for s in str_s:
         if s:
-            s = s.replace('\n'," ").replace('\\u2009',"").replace('\xa0',"").replace('\u2005',"")
-            fr = re.compile(r'<[^>]+>',re.S)
-            dr = fr.sub('',s)
+            s = s.replace('\n', " ").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "")
+            fr = re.compile(r'<[^>]+>', re.S)
+            dr = fr.sub('', s)
             for i in dr:
                 new_dr = new_dr + i
     return new_dr
+
 
 class BmjSpider(scrapy.Spider):
     name = 'bmj'
@@ -45,6 +46,5 @@ class BmjSpider(scrapy.Spider):
         item['doi'] = response.xpath('//meta[@name="citation_doi"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="citation_author"]/@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
+        item["is_pubmed"] = 0
         yield item
-
-

@@ -8,10 +8,9 @@ USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36
 ROBOTSTXT_OBEY = False
 FEED_EXPORT_ENCODING = 'utf-8'
 
-LOG_LEVEL = 'DEBUG'
-LOG_FILE= '../json/name.log'
+# LOG_LEVEL = 'DEBUG'
+# LOG_FILE= '../json/name.log'
 
-# 代服务器的设置。
 PROXIES = [
  'http://124.89.2.250:63000',
  'http://106.75.71.122:80',
@@ -65,7 +64,7 @@ DOWNLOAD_DELAY = 1
 
 # Configure item pipelines
 ITEM_PIPELINES = {
-   'Jamanetwork.pipelines.JamanetworkPipeline': 300,
+   # 'Jamanetwork.pipelines.JamanetworkPipeline': 300,
    'Jamanetwork.pipelines.MongoDBPipeline': 301,
 
 }
@@ -93,5 +92,8 @@ COMMANDS_MODULE = 'Jamanetwork.commands'
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
-MONGODB_DB = "xuguoliang"
-MONGODB_COLLECTION = "xuguoliang"
+MONGODB_DB = "qisu"
+MONGODB_COLLECTION = "iflow"
+
+
+

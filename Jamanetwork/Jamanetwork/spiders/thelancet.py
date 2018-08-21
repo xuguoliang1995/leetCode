@@ -1,4 +1,3 @@
-
 import re
 import scrapy
 from scrapy import Request
@@ -9,9 +8,9 @@ def strip_tag(str_s):
     new_dr = ""
     for s in str_s:
         if s:
-            s = s.replace('\n',"").replace('\\u2009',"").replace('\xa0',"").replace('\u2005',"")
-            fr = re.compile(r'<[^>]+>',re.S)
-            dr = fr.sub('',s)
+            s = s.replace('\n', "").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "")
+            fr = re.compile(r'<[^>]+>', re.S)
+            dr = fr.sub('', s)
             for i in dr:
                 new_dr = new_dr + i
     return new_dr
@@ -19,8 +18,8 @@ def strip_tag(str_s):
 
 def tranfrom_date(t):
     if t:
-        year,month,day = t.split('/')
-        return '%s-%s-%s' % (year,month,day)
+        year, month, day = t.split('/')
+        return '%s-%s-%s' % (year, month, day)
     return ""
 
 
@@ -29,7 +28,7 @@ def handler_abstract(extract_list):
     if extract_list:
         for i in extract_list:
             new_str = new_str + i
-            new_str = new_str.replace('\n','').replace('\u2009.','').replace('\u202f',"")
+            new_str = new_str.replace('\n', '').replace('\u2009.', '').replace('\u202f', "")
         return new_str
     return ""
 
@@ -81,13 +80,11 @@ class ThelancetSpider(scrapy.Spider):
             item['source'] = ""
             item['if_2017'] = ""
         item['pub_date'] = tranfrom_date(response.xpath('//meta[contains(@name,"date")]/@content').get())
-        item['abstract'] = strip_tag(response.xpath('//meta[@name="citation_abstract"]/@content').extract()) or\
-                           handler_abstract(strip_tag(response.xpath('//div[@class="section-paragraph"]//text()').extract()))\
+        item['abstract'] = strip_tag(response.xpath('//meta[@name="citation_abstract"]/@content').extract()) or \
+                           handler_abstract(strip_tag(response.xpath('//div[@class="section-paragraph"]//text()').extract())) \
                            or " "
         item['doi'] = response.xpath('//meta[@name="citation_doi"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="citation_author"]/@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
+        item["is_pubmed"] = 0
         yield item
-
-
-

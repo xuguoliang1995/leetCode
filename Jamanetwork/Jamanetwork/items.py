@@ -1,4 +1,3 @@
-
 import scrapy
 from scrapy import Field
 
@@ -14,8 +13,5 @@ class JamanetworkItem(scrapy.Item):
     if_2017 = Field()
     type = Field()
     issn = Field()
+    is_pubmed = Field()
     AffiliationInfo = Field()
-
-
-
-

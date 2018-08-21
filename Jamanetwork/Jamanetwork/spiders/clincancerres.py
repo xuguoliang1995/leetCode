@@ -8,9 +8,9 @@ def strip_tag(str_s):
     new_dr = ""
     for s in str_s:
         if s:
-            s = s.replace('\n'," ").replace('\\u2009',"").replace('\xa0',"").replace('\u2005',"")
-            fr = re.compile(r'<[^>]+>',re.S)
-            dr = fr.sub('',s)
+            s = s.replace('\n', " ").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "")
+            fr = re.compile(r'<[^>]+>', re.S)
+            dr = fr.sub('', s)
             for i in dr:
                 new_dr = new_dr + i
     return new_dr
@@ -18,8 +18,8 @@ def strip_tag(str_s):
 
 def tranfrom_date(t):
     if t:
-        year,month,day = t.split('/')
-        return '%s-%s-%s' % (year,month,day)
+        year, month, day = t.split('/')
+        return '%s-%s-%s' % (year, month, day)
     return ""
 
 
@@ -36,9 +36,9 @@ class Clincancerres1Spider(scrapy.Spider):
     name = 'clincancerres'
     # allowed_domains = ['clincancerres.aacrjournals.org']
     start_urls = [
-                  'http://clincancerres.aacrjournals.org/content/early/recent?utm_source=early&utm_medium=dropdown&utm_campaign=menu',
-                  'http://clincancerres.aacrjournals.org/content/23/11?utm_source=current&utm_medium=dropdown&utm_campaign=menu&current-issue=y'
-                 ]
+        'http://clincancerres.aacrjournals.org/content/early/recent?utm_source=early&utm_medium=dropdown&utm_campaign=menu',
+        'http://clincancerres.aacrjournals.org/content/23/11?utm_source=current&utm_medium=dropdown&utm_campaign=menu&current-issue=y'
+    ]
 
     def parse(self, response):
         detail_urls = response.xpath('//div[@class="pane-content"]//div[@class="article-title"]//a//@href').extract()
@@ -63,6 +63,5 @@ class Clincancerres1Spider(scrapy.Spider):
         item['doi'] = response.xpath('//meta[@name="DC.Identifier"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="citation_author"]/@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
+        item["is_pubmed"] = 0
         yield item
-
-
