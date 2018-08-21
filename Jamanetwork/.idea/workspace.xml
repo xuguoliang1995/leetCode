@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38461850-b8a8-4468-b9f5-98238637466b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../qisu/App/Applications.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../qisu/App/Pro_TE_Maket.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../qisu/App/Submission.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../qisu/file/Application_ApplicationDocs.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../qisu/file/Pro_TE_mark_makelookup.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../qisu/file/Submission_Submission_lookup_SubmissionProperty.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cell/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cell/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cell/Cell/commands/crawlall.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/Cell/commands/crawlall.py" afterDir="false" />
@@ -22,35 +16,7 @@
       <change beforePath="$PROJECT_DIR$/../Cell/Cell/spiders/scarm.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cell/Cell/spiders/sigle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/Cell/spiders/sigle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/json/d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/json/name.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/academic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/academic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/advances.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/advances.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/bmj.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/bmj.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/bmj1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/bmj1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/cancerdiscovery.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/cancerdiscovery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/clincancerres.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/clincancerres.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/diabetes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/diabetes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/immunology.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/immunology.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/jamanetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/jamanetwork.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/lww.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/lww.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/nejm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/nejm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/sciencemag.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/sciencemag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/stm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/stm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jamanetwork/spiders/thelancet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jamanetwork/spiders/thelancet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/.idea/nature.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/.idea/nature.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/nature/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/nature/json/immunology.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/nature/json/name.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/nature/json/text.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/nature/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/nature/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/nature/spiders/immunology.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/spiders/immunology.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,14 +43,14 @@
           <entry key="json" value="68" />
           <entry key="log" value="18" />
           <entry key="py" value="8155" />
-          <entry key="txt" value="34" />
+          <entry key="txt" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="68" />
           <entry key="Log" value="18" />
-          <entry key="PLAIN_TEXT" value="48" />
+          <entry key="PLAIN_TEXT" value="56" />
           <entry key="Python" value="8155" />
         </counts>
       </usages-collector>
@@ -112,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jamanetwork/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="97">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
         </entry>
@@ -263,7 +229,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="488" />
+    <option name="x" value="303" />
     <option name="y" value="27" />
     <option name="width" value="1397" />
     <option name="height" value="877" />
@@ -448,14 +414,23 @@
       <option name="presentableId" value="Default" />
       <updated>1532651130187</updated>
     </task>
+    <task id="LOCAL-00001" summary="提交">
+      <created>1534846191229</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1534846191231</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="488" y="27" width="1397" height="877" extended-state="0" />
+    <frame x="303" y="27" width="1397" height="877" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14098836" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" weight="0.32939634" />
       <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.34908137" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.328084" />
@@ -495,7 +470,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -783,8 +759,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="97">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
         </state>
       </provider>
     </entry>
