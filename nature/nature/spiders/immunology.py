@@ -55,11 +55,15 @@ class ImmunologySpider(scrapy.Spider):
     def parse(self, response):
         detail_urls = response.xpath('//div//ul//li//h3//a//@href').extract()
         for detail_url in detail_urls:
-            head_url = "https://www.nature.com"
-            request_url = head_url + detail_url
-            request = Request(url=request_url, callback=self.parse_info, dont_filter=True)
-            request.meta['link'] = request_url
-            yield request
+            if "http" in detail_url:
+                print("我打印出来了", detail_url)
+                continue
+            else:
+                head_url = "https://www.nature.com"
+                request_url = head_url + detail_url
+                request = Request(url=request_url, callback=self.parse_info, dont_filter=True)
+                request.meta['link'] = request_url
+                yield request
 
     def parse_info(self, response):
         item = NatureItem()

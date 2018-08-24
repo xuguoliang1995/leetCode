@@ -7,8 +7,8 @@ NEWSPIDER_MODULE = 'nature.spiders'
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
 ROBOTSTXT_OBEY = False
 
-LOG_LEVEL = 'DEBUG'
-LOG_FILE = '../json/name.log'
+# LOG_LEVEL = 'DEBUG'
+# LOG_FILE = '../json/name.log'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 16
@@ -46,7 +46,7 @@ CONCURRENT_REQUESTS_PER_IP = 16
 
 # Configure item pipelines
 ITEM_PIPELINES = {
-   'nature.pipelines.NaturePipeline': 300,
+   # 'nature.pipelines.NaturePipeline': 300,
    'nature.pipelines.MongoDBPipeline': 301,
 }
 
@@ -70,8 +70,8 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
-MONGODB_SERVER = "localhost"
+MONGODB_SERVER = "124.42.117.168"
 MONGODB_PORT = 27017
-MONGODB_DB = "xuguoliang"
-MONGODB_COLLECTION = "xuguoliang"
+MONGODB_DB = "qisu"
+MONGODB_COLLECTION = "iflow"
 
