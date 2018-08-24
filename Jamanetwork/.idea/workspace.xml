@@ -17,17 +17,15 @@
       <change beforePath="$PROJECT_DIR$/../Cell/Cell/spiders/chromedriver" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cell/Cell/spiders/scarm.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cell/Cell/spiders/sigle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cell/Cell/spiders/sigle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/.idea/nature.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/.idea/nature.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/nature/json/immunology.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nature/nature/json/name.log" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/json/name.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nature/nature/json/name.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/nature/json/text.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/nature/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/nature/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nature/nature/spiders/immunology.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nature/nature/spiders/immunology.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sci.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sci.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +68,7 @@
           <entry key="Dockerfile" value="2" />
           <entry key="json" value="45" />
           <entry key="log" value="31" />
-          <entry key="py" value="346" />
+          <entry key="py" value="347" />
           <entry key="txt" value="34" />
         </counts>
       </usages-collector>
@@ -79,18 +77,27 @@
           <entry key="JSON" value="45" />
           <entry key="Log" value="31" />
           <entry key="PLAIN_TEXT" value="36" />
-          <entry key="Python" value="346" />
+          <entry key="Python" value="347" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Jamanetwork/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jamanetwork/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="75" selection-end-column="48" />
+            <state relative-caret-position="198">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -198,10 +205,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="321" />
-    <option name="y" value="103" />
-    <option name="width" value="1397" />
-    <option name="height" value="877" />
+    <option name="x" value="271" />
+    <option name="y" value="33" />
+    <option name="width" value="1158" />
+    <option name="height" value="839" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -221,12 +228,6 @@
               <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
               <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Jamanetwork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
-              <item name="Jamanetwork" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -236,7 +237,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -410,7 +411,35 @@
       <option name="project" value="LOCAL" />
       <updated>1535072723827</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="提交">
+      <created>1535075776242</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535075776242</updated>
+    </task>
+    <task id="LOCAL-00005" summary="提交">
+      <created>1535077225594</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535077225594</updated>
+    </task>
+    <task id="LOCAL-00006" summary="提交">
+      <created>1535077404458</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1535077404458</updated>
+    </task>
+    <task id="LOCAL-00007" summary="提交">
+      <created>1535077697284</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1535077697284</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -423,20 +452,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="648" y="23" width="1397" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="291" y="479" width="1158" height="839" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14098836" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17062445" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.32939634" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49927327" weight="0.34908137" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.49927327" visible="true" weight="0.3480663" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50072676" side_tool="true" weight="0.34908137" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.328084" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32939634" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.27952754" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.27821523" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39398086" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -739,15 +767,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="281">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Jamanetwork/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="75" selection-end-column="48" />
+        <state relative-caret-position="198">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
