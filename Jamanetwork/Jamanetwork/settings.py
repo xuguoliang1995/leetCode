@@ -50,7 +50,6 @@ DOWNLOAD_DELAY = 1
 #    'Jamanetwork.middlewares.JamanetworkSpiderMiddleware': 543,
 #}
 
-# Enable or disable downloader middlewares
 # DOWNLOADER_MIDDLEWARES = {
    # 'Jamanetwork.middlewares.JamanetworkDownloaderMiddleware': 543,
 #    'Jamanetwork.middlewares.RandomProxyMiddleware': 749,
@@ -90,10 +89,11 @@ ITEM_PIPELINES = {
 
 COMMANDS_MODULE = 'Jamanetwork.commands'
 
-MONGODB_SERVER = "localhost"
+MONGODB_SERVER = "124.42.117.168"
 MONGODB_PORT = 27017
 MONGODB_DB = "qisu"
 MONGODB_COLLECTION = "iflow"
+
 
 
 
