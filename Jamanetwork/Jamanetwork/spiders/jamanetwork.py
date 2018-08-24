@@ -55,7 +55,7 @@ class JamanetworkSpider(scrapy.Spider):
 
     def parse_info(self, response):
         item = JamanetworkItem()
-        item['title'] = strip_tag(response.xpath('//meta[@property="og:title"]/@content').extract_first())
+        item['title'] = strip_tag(response.xpath('//meta[@property="og:title"]/@content').extract())
         item['link'] = response.meta['link']
         item['source'] = "JAMA internal medicine"
         item['pub_date'] = tranfrom_date(response.xpath('//meta[@name="citation_online_date"]/@content').get()) or \

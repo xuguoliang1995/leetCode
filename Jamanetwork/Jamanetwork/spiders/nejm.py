@@ -8,8 +8,8 @@ def strip_tag(str_s):
     new_dr = ""
     for s in str_s:
         if s:
-            s = s.replace('\n', " ").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "")
-            fr = re.compile(r'<[^>]+>', re.S)
+            s = s.replace('\n', " ").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "").replace("\u2009","")
+            fr = re.compile(r'</?\w+[^>]*>', re.S)
             dr = fr.sub('', s)
             for i in dr:
                 new_dr = new_dr + i

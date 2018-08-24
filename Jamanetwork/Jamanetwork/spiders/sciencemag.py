@@ -8,7 +8,7 @@ def strip_tag(str_s):
     new_dr = ""
     for s in str_s:
         if s:
-            s = s.replace('\n', " ").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "")
+            s = s.replace('\n', " ").replace('\\u2009', "").replace('\xa0', "").replace('\u2005', "").replace('\u2009', "")
             fr = re.compile(r'<[^>]+>', re.S)
             dr = fr.sub('', s)
             for i in dr:
@@ -58,7 +58,7 @@ class SciencemagSpider(scrapy.Spider):
 
     def parse_info(self, response):
         item = JamanetworkItem()
-        item['title'] = strip_tag(response.xpath('//meta[@property="og:title"]/@content').extract_first())
+        item['title'] = strip_tag(response.xpath('//meta[@property="og:title"]/@content').extract())
         item['link'] = response.meta['link']
         # "issnPrint" : "0036-8075",
         item["issn"] = "1095-9203"

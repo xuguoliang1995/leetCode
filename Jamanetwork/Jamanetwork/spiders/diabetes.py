@@ -51,7 +51,7 @@ class DiabetesSpider(scrapy.Spider):
 
     def parse_info(self, response):
         item = JamanetworkItem()
-        item['title'] = strip_tag(response.xpath('//meta[@property="og:title"]/@content').extract_first())
+        item['title'] = strip_tag(response.xpath('//meta[@property="og:title"]/@content').extract())
         item['link'] = response.meta['link']
         item['source'] = "Diabetes"
         item['pub_date'] = response.xpath('//meta[@name="DC.Date"]/@content').get()
