@@ -29,10 +29,12 @@ def get_url():
 
 def connect_redis(links):
     redis_config = {
-        "host": "127.0.0.1",
-        "port": 6379
+        "host": "119.254.209.50",
+        "port": 6379,
+        "password":"Qidian2016"
+
     }
-    redis_conn = redis.Redis(**redis_config)
+    redis_conn = redis.Redis(**redis_config )
     for link in links:
         redis_conn.sadd('link',link)
     
