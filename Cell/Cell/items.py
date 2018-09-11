@@ -11,7 +11,9 @@ class CellItem(scrapy.Item):
     doi = Field()
     authors = Field()
     if_2017 = Field()
+    type = Field()
     issn = Field()
+    is_pubmed = Field()
     AffiliationInfo = Field()
 
 

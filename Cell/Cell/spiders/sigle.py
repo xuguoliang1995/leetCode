@@ -1,4 +1,3 @@
-
 import re
 import scrapy
 from scrapy import Request
@@ -10,9 +9,9 @@ def strip_tag(str_s):
     new_dr = ""
     for s in str_s:
         if s:
-            s = s.replace('\n',"").replace('\xa0',"").replace('\u2005',"")
-            fr = re.compile(r'<[^>]+>',re.S)
-            dr = fr.sub('',s)
+            s = s.replace('\n', "").replace('\xa0', "").replace('\u2005', "")
+            fr = re.compile(r'</?\w+[^>]*>', re.S)
+            dr = fr.sub('', s)
             for i in dr:
                 new_dr = new_dr + i
     new_dr = re.sub(r"\s{2,}", "", new_dr)
@@ -22,7 +21,7 @@ def strip_tag(str_s):
 def tranfrom_date(t):
     if t:
         try:
-            time_format = datetime.strptime(t,"%d %b %Y")
+            time_format = datetime.strptime(t, "%d %b %Y")
         except:
             time_format = datetime.strptime(t, "%d %B %Y")
         time_format = time_format.strftime("%Y-%m-%d")
@@ -32,8 +31,8 @@ def tranfrom_date(t):
 
 def tranfrom_date1(t):
     if t:
-        year,month,day = t.split('/')
-        return '%s-%s-%s' % (year,month,day)
+        year, month, day = t.split('/')
+        return '%s-%s-%s' % (year, month, day)
     return ""
 
 
@@ -45,6 +44,7 @@ def handler_abstract(extract_list):
         return new_str
     return ""
 
+
 def doi_str(s):
     s = s.split('/')[2:]
     new_s = ""
@@ -52,8 +52,9 @@ def doi_str(s):
         new_s = new_s + i
     return new_s
 
+
 class ElifesciencesSpider(scrapy.Spider):
-    name = 'sigle'
+    name = 'sigle1'
     # allowed_domains = ['elifesciences.org']
     start_urls = ['http://elifesciences.org']
 
@@ -73,16 +74,17 @@ class ElifesciencesSpider(scrapy.Spider):
         item['source'] = "eLife"
         item['pub_date'] = response.xpath('//meta[@name="dc.date"]/@content').get()
         item['abstract'] = strip_tag(response.xpath('//section[@id="abstract"]//p//text()').extract())
-        item['doi'] = response.xpath('//meta[@name="dc.identifier"]/@content').get()
+        item['doi'] = response.xpath('//meta[@name="dc.identifier"]/@content').get()[4:]
         item['authors'] = response.xpath('//meta[@name="dc.contributor"]/@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 7.616
         item['issn'] = response.xpath('//hypothesis-highlight//text()').get() or '2050-084X'
+        item["is_pubmed"] = 0
         yield item
 
 
 class JciSpider(scrapy.Spider):
-    name = 'sigle1'
+    name = 'sigle2'
     # allowed_domains = ['elifesciences.org']
     start_urls = ['https://www.jci.org/just-published']
 
@@ -97,11 +99,11 @@ class JciSpider(scrapy.Spider):
 
     def parse_info(self, response):
         item = CellItem()
-        item['title'] = strip_tag(response.xpath('//meta[@name="citation_title"]//@content').extract_first())
+        item['title'] = strip_tag(response.xpath('//meta[@name="citation_title"]//@content').extract())
         item['link'] = response.meta['link']
         item['source'] = "The Journal of clinical investigation"
         item['pub_date'] = response.xpath('///meta[@name="DC.Date"]/@content').get()
-        item['abstract'] = strip_tag(response.xpath('//div[@id="section-abstract"]//p//text()').extract()) or\
+        item['abstract'] = strip_tag(response.xpath('//div[@id="section-abstract"]//p//text()').extract()) or \
                            strip_tag(response.xpath('//div[contains(@style,"margin-bottom")]//p//text()').extract())
 
         item['doi'] = response.xpath('//meta[@name="citation_doi"]/@content').get()
@@ -109,35 +111,8 @@ class JciSpider(scrapy.Spider):
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 13.251
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').get()
+        item["is_pubmed"] = 0
         yield item
-
-
-# class CambridgetSpider(scrapy.Spider):
-#     name = 'sigle2'
-#     # allowed_domains = ['www.cambridge.org']
-#     start_urls = ['https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/latest-issue']
-#     def parse(self, response):
-#         detail_urls = response.xpath('//ul[@class="details"]//li[@class="title"]//a//@href').extract()
-#         for detail_url in detail_urls:
-#             request_url = 'https://www.cambridge.org' + detail_url
-#             print(request_url)
-#             request = Request(url=request_url, callback=self.parse_info, dont_filter=False)
-#             request.meta['link'] = request_url
-#             yield request
-#
-#     def parse_info(self, response):
-#         item = CellItem()
-#         item['title'] = response.xpath('//meta[@name="citation_title"]//@content').extract_first()
-#         item['link'] = response.meta['link']
-#         item['source'] = "The Behavioral and brain sciences"
-#         item['pub_date'] = response.xpath('///meta[@name="citation_online_date"]/@content').get()
-#         item['abstract'] = strip_tag(response.xpath('//div[@class="abstract"]//p//text()').extract())
-#         item['doi'] = response.xpath('//meta[@name="dc.identifier"]/@content').get()
-#         item['authors'] = response.xpath('//meta[@name="citation_author"]//@content').extract()
-#         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
-#         item['if_2017'] = 15.071
-#         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract()[1]
-#         yield item
 
 
 class NatureSpider(scrapy.Spider):
@@ -156,17 +131,20 @@ class NatureSpider(scrapy.Spider):
 
     def parse_info(self, response):
         item = CellItem()
-        item['title'] = strip_tag(response.xpath('//meta[@name="citation_title"]//@content').extract_first())
+        item['title'] = strip_tag(response.xpath('//meta[@name="citation_title"]//@content').extract()) or\
+                        strip_tag(response.xpath('//meta[@name="dc.title"]//@content').extract())
         item['link'] = response.meta['link']
         item['source'] = "Molecular psychiatry"
         item['pub_date'] = response.xpath('///meta[@name="dc.date"]/@content').get()
-        item['abstract'] = strip_tag(response.xpath('//div[@itemprop="description"]//p//text()').extract()) or strip_tag(
+        item['abstract'] = strip_tag(
+            response.xpath('//div[@itemprop="description"]//p//text()').extract()) or strip_tag(
             response.xpath('//div[@id="Abs1-content"]//p//text()').extract())
-        item['doi'] = response.xpath('//meta[@name="prism.doi"]/@content').get()
+        item['doi'] = response.xpath('//meta[@name="prism.doi"]/@content').get().split(":")[1]
         item['authors'] = response.xpath('//meta[@name="citation_author"]//@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 11.64
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').get()
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -190,13 +168,15 @@ class JemSpider(scrapy.Spider):
         item['link'] = response.meta['link']
         item['source'] = "The Journal of experimental medicine"
         item['pub_date'] = response.xpath('//meta[@name="DC.Date"]/@content').get()
-        item['abstract'] = strip_tag(response.xpath('//meta[@name="og:description"]/@content').get())
+        item['abstract'] = strip_tag(response.xpath('//meta[@name="og:description"]/@content').extract())
         item['doi'] = response.xpath('//meta[@name="DC.Identifier"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="citation_author"]//@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 10.79
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract()[1]
+        item["is_pubmed"] = 0
         yield item
+
 
 class AtsjournalsSpider(scrapy.Spider):
     name = 'sigle5'
@@ -218,13 +198,14 @@ class AtsjournalsSpider(scrapy.Spider):
         item['link'] = response.meta['link']
         item['source'] = 'American journal of respiratory and critical care medicine'
         item['pub_date'] = response.xpath('//meta[@name="dc.Date"]/@content').get()
-        item['abstract'] = strip_tag(response.xpath('//div[@class="hlFld-Abstract"]//p//text() ').extract()) or\
+        item['abstract'] = strip_tag(response.xpath('//div[@class="hlFld-Abstract"]//p//text() ').extract()) or \
                            strip_tag(response.xpath('//div[@class="abstract"]//p//text()').extract())
         item['doi'] = response.xpath('//meta[@name="dc.Identifier"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="dc.Creator"]//@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 15.239
         item['issn'] = '1535-4970'
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -232,8 +213,10 @@ class OnlinejaccSpider(scrapy.Spider):
     name = 'sigle6'
     # allowed_domains = ['www.cambridge.org']
     start_urls = ['http://www.onlinejacc.org/content/72/6?current-issue=y']
+
     def parse(self, response):
-        detail_urls = response.xpath('//div[@class="toc-citation"]//a[@class="highwire-cite-linked-title"]//@href').extract()
+        detail_urls = response.xpath(
+            '//div[@class="toc-citation"]//a[@class="highwire-cite-linked-title"]//@href').extract()
         for detail_url in detail_urls:
             request_url = 'https://www.onlinejacc.org' + detail_url
             print(request_url)
@@ -253,6 +236,7 @@ class OnlinejaccSpider(scrapy.Spider):
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 16.834
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract()[1]
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -275,13 +259,15 @@ class AhajournalSpider(scrapy.Spider):
         item['title'] = response.xpath('//meta[@name="dc.Title"]//@content').extract_first().strip('\n')
         item['link'] = response.meta['link']
         item['source'] = "Circulation"
-        item['pub_date'] = tranfrom_date(response.xpath('//div[@class="epub-section"]//span[@class="epub-section__date"]//text()').get())
+        item['pub_date'] = tranfrom_date(
+            response.xpath('//div[@class="epub-section"]//span[@class="epub-section__date"]//text()').get())
         item['abstract'] = strip_tag(response.xpath('//div[@class="hlFld-Abstract"]//p//text()').extract())
         item['doi'] = doi_str(response.xpath('//input[@name="redirectUri"]//@value').get())
         item['authors'] = response.xpath('//meta[@name="dc.Creator"]//@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 18.88
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract() or "0009-7322"
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -310,7 +296,8 @@ class EuropeanurologySpider(scrapy.Spider):
         item['authors'] = response.xpath('//meta[@name="citation_author"]//@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 17.581
-        item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract()[0]
+        item['issn'] = "0302-2838"
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -340,6 +327,7 @@ class BloodSpider(scrapy.Spider):
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 15.132
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract()[0]
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -359,7 +347,7 @@ class JacionlineSpider(scrapy.Spider):
 
     def parse_info(self, response):
         item = CellItem()
-        item['title'] = strip_tag(response.xpath('//meta[@name="citation_title"]//@content').extract_first())
+        item['title'] = strip_tag(response.xpath('//meta[@name="citation_title"]//@content').extract())
         item['link'] = response.meta['link']
         item['source'] = "The Journal of allergy and clinical immunology"
         item['pub_date'] = tranfrom_date1(response.xpath('//meta[@name="citation_online_date"]/@content').get())
@@ -369,6 +357,7 @@ class JacionlineSpider(scrapy.Spider):
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 13.258
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract()[0]
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -398,6 +387,7 @@ class ErjSpider(scrapy.Spider):
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 12.242
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract()[1]
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -405,6 +395,7 @@ class HepatologySpider(scrapy.Spider):
     name = 'sigle12'
     # allowed_domains = ['www.cambridge.org']
     start_urls = ['https://www.journal-of-hepatology.eu/inpress']
+
     def parse(self, response):
         detail_urls = response.xpath('//div[@class="articleTitle"]//a//@href').extract()
         for detail_url in detail_urls:
@@ -426,7 +417,9 @@ class HepatologySpider(scrapy.Spider):
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 14.911
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract()[0]
+        item["is_pubmed"] = 0
         yield item
+
 
 class AjpSpider(scrapy.Spider):
     name = 'sigle13'
@@ -448,12 +441,14 @@ class AjpSpider(scrapy.Spider):
         item['link'] = response.meta['link']
         item['source'] = 'The American journal of psychiatry'
         item['pub_date'] = response.xpath('//meta[@name="dc.Date"]/@content').get()
-        item['abstract'] = strip_tag(response.xpath('//div[@class="abstractSection abstractInFull"]//p//text()').extract())
+        item['abstract'] = strip_tag(
+            response.xpath('//div[@class="abstractSection abstractInFull"]//p//text()').extract())
         item['doi'] = response.xpath('//meta[@name="dc.Identifier"]/@content').extract()[1]
         item['authors'] = response.xpath('//meta[@name="dc.Creator"]//@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 13.391
         item['issn'] = '1535-7228'
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -461,6 +456,7 @@ class AnnalsSpider(scrapy.Spider):
     name = 'sigle14'
     # allowed_domains = ['elifesciences.org']
     start_urls = ['http://annals.org/aim/latest']
+
     def parse(self, response):
         detail_urls = response.xpath('//div[@class="text-links"]//a//@href').extract()
         for detail_url in detail_urls:
@@ -475,14 +471,19 @@ class AnnalsSpider(scrapy.Spider):
         item['title'] = response.xpath('//meta[@name="citation_title"]/@content').extract_first()
         item['link'] = response.meta['link']
         item['source'] = "Annals of internal medicine"
-        item['pub_date'] = tranfrom_date(response.xpath('//span[@class="wi-pub-date large-view-only"]//text()').extract()[2].strip())
-        item['abstract'] = strip_tag(response.xpath('//div[@class="typed para"]//text()').extract())or response.xpath('//section[@class="abstract"]//p//text()').extract_first()
+        item['pub_date'] = tranfrom_date(
+            response.xpath('//span[@class="wi-pub-date large-view-only"]//text()').extract()[2].strip())
+        item['abstract'] = strip_tag(response.xpath('//section[@class="abstract"]//p//text()').extract()) or \
+                           strip_tag(response.xpath('//div[@class="typed para"]//text()').extract()) or \
+                           strip_tag(response.xpath(
+                               '//div[contains(@class,"content-section")]//div[@class="typed para"]//text()').extract()) or ""
         item['doi'] = response.xpath('//meta[@name="citation_doi"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="citation_author"]/@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 19.384
         # "issnPrint" : "0003-4819"
         item['issn'] = "1539-3704"
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -490,28 +491,34 @@ class AscopubsSpider(scrapy.Spider):
     name = 'sigle15'
     # allowed_domains = ['elifesciences.org']
     start_urls = ['http://ascopubs.org/toc/jco/current']
+
     def parse(self, response):
         detail_urls = response.xpath('//div[@class="art_title linkable"]//a//@href').extract()
+        pub_date = strip_tag(response.xpath('//section[@class="tocTools"]//h3/text()').get().split(",")[2])
+        pub_date = datetime.strptime(pub_date, "%B %Y").strftime("%Y-%m-%d")
         for detail_url in detail_urls:
             request_url = 'http://ascopubs.org' + detail_url
             print(request_url)
             request = Request(url=request_url, callback=self.parse_info, dont_filter=True)
             request.meta['link'] = request_url
             request.meta['detail_url'] = detail_url
+            request.meta["pub_date"] = pub_date
             yield request
 
     def parse_info(self, response):
         item = CellItem()
-        item['title'] = strip_tag(response.xpath('//div[@class="publicationContentTitle"]//h1//text()').extract()).strip()
+        item['title'] = strip_tag(
+            response.xpath('//div[@class="publicationContentTitle"]//h1//text()').extract()).strip()
         item['link'] = response.meta['link']
         item['source'] = "Journal of clinical oncology : official journal of the American Society of Clinical Oncology"
-        item['pub_date'] = response.xpath('//meta[@name="dc.Date"]/@content').get()
+        item['pub_date'] = response.meta['pub_date']
         item['abstract'] = strip_tag(response.xpath('//div[@class="abstractSection abstractInFull"]//text()').extract())
-        item['doi'] = response.meta['detail_url']
+        item['doi'] = response.meta['detail_url'][10:]
         item['authors'] = response.xpath('//div[@class="header"]//text()').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 26.303
         item['issn'] = "1527-7755"
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -519,6 +526,7 @@ class AstroSpider(scrapy.Spider):
     name = 'sigle16'
     # allowed_domains = ['elifesciences.org']
     start_urls = ['https://www.gastrojournal.org']
+
     def parse(self, response):
         detail_urls = response.xpath('//div[@class="articleTitle"]//a//@href').extract()
         for detail_url in detail_urls:
@@ -535,13 +543,14 @@ class AstroSpider(scrapy.Spider):
         item['source'] = "Gastroenterology"
         item['pub_date'] = tranfrom_date1(response.xpath('//meta[@name="citation_online_date"]/@content').get()) or \
                            tranfrom_date1(response.xpath('//meta[@name="citation_date"]/@content').get())
-        item['abstract'] = strip_tag(response.xpath('//meta[@name="citation_abstract"]/@content').extract()) or\
+        item['abstract'] = strip_tag(response.xpath('//meta[@name="citation_abstract"]/@content').extract()) or \
                            strip_tag(response.xpath('//div[@class="content"]//text()').extract())
         item['doi'] = response.xpath('//meta[@name="citation_doi"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="citation_author"]/@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         item['if_2017'] = 20.773
         item['issn'] = response.xpath('//meta[@name="citation_issn"]/@content').extract()[0]
+        item["is_pubmed"] = 0
         yield item
 
 
@@ -549,6 +558,7 @@ class OnlinelibrarySpider(scrapy.Spider):
     name = 'sigle17'
     # allowed_domains = ['elifesciences.org']
     start_urls = ['https://onlinelibrary.wiley.com/journal/15424863']
+
     def parse(self, response):
         detail_urls = response.xpath('//div[@class="issue-item"]/a//@href').extract()
         for detail_url in detail_urls:
@@ -564,13 +574,14 @@ class OnlinelibrarySpider(scrapy.Spider):
         item['link'] = response.meta['link']
         item['source'] = "CA: a cancer journal for clinicians"
         item['pub_date'] = tranfrom_date(response.xpath('//div//span[@class="epub-date"]//text()').get())
-        item['abstract'] = strip_tag(response.xpath('//div[@class="article-section__content"]/p/text()').extract())or\
-                           strip_tag(response.xpath('//section//div[@class="article-section__content en main"]//p//text()').extract())
+        item['abstract'] = strip_tag(response.xpath('//div[@class="article-section__content"]/p/text()').extract()) or \
+                           strip_tag(response.xpath(
+                               '//section//div[@class="article-section__content en main"]//p//text()').extract())
         item['doi'] = response.xpath('//meta[@name="citation_doi"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="citation_author"]/@content').extract()
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]/@content').extract()
         # "issnPrint" : "0007-9235",
         item['if_2017'] = 244.585
         item['issn'] = "1542-4863"
+        item["is_pubmed"] = 0
         yield item
-

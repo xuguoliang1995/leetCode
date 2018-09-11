@@ -6,16 +6,16 @@ from Cell.items import CellItem
 
 def strip_tag(s):
     if s:
-        fr = re.compile(r'<[^>]+>',re.S)
-        dr = fr.sub('',s).replace('\xa0',"")
+        fr = re.compile(r'</?\w+[^>]*>', re.S)
+        dr = fr.sub('', s).replace('\xa0', "")
         return dr
     return ""
 
 
 def tranfrom_date(t):
     if t:
-        year,month,day = t.split('/')
-        return '%s-%s-%s' % (year,month,day)
+        year, month, day = t.split('/')
+        return '%s-%s-%s' % (year, month, day)
     return ""
 
 
@@ -30,28 +30,28 @@ def handler_abstract(extract_list):
 
 class CellSpider(scrapy.Spider):
     name = 'cell'
-    allowed_domains = ['www.cell.com']
+    # allowed_domains = ['www.cell.com']
     # start_urls = ['http://www.cell.com/cell/current',
     #               'https://www.cell.com/cell-host-microbe/current']
 
     def start_requests(self):
         urls = [
-                'https://www.cell.com/cell/current',
-                'https://www.cell.com/cell-host-microbe/current',
-                'https://www.cell.com/cell/newarticles',
-                'https://www.cell.com/neuron/newarticles',
-                'http://www.cell.com/cell-metabolism/issue?pii=S1550-4131(16)X0007-1',
-                'http://www.cell.com/stem/newarticles',
-                'http://www.cell.com/cell-stem-cell/current',
-                'http://www.cell.com/cell-host-microbe/newarticles',
-                'http://www.cell.com/molecular-cell/current',
-                'http://www.cell.com/molecular-cell/newarticles',
-                'http://www.cell.com/immunity',
-                'https://www.cell.com/cancer-cell/newarticles',
-                'https://www.cell.com/cell-metabolism/newarticles',
-                ]
+            'https://www.cell.com/cell/current',
+            'https://www.cell.com/cell-host-microbe/current',
+            'https://www.cell.com/cell/newarticles',
+            'https://www.cell.com/neuron/newarticles',
+            'http://www.cell.com/cell-metabolism/issue?pii=S1550-4131(16)X0007-1',
+            'http://www.cell.com/stem/newarticles',
+            'http://www.cell.com/cell-stem-cell/current',
+            'http://www.cell.com/cell-host-microbe/newarticles',
+            'http://www.cell.com/molecular-cell/current',
+            'http://www.cell.com/molecular-cell/newarticles',
+            'http://www.cell.com/immunity',
+            'https://www.cell.com/cancer-cell/newarticles',
+            'https://www.cell.com/cell-metabolism/newarticles',
+        ]
         for url in urls:
-            yield Request(url=url,dont_filter=True)
+            yield Request(url=url, dont_filter=True)
 
     def make_requests_from_url(self, url):
         """ This method is deprecated. """
@@ -63,12 +63,12 @@ class CellSpider(scrapy.Spider):
             header_url = 'https://www.cell.com'
             request_url = header_url + detail_url
             print(request_url)
-            request = Request(url=request_url,callback=self.parse_info,dont_filter=True)
+            request = Request(url=request_url, callback=self.parse_info, dont_filter=True)
             request.meta['link'] = request_url
             yield request
-        print('#'*30)
+        print('#' * 30)
 
-    def parse_info(self,response):
+    def parse_info(self, response):
         item = CellItem()
         item['title'] = strip_tag(response.xpath('//meta[@name="citation_title"]/@content').extract_first())
         item['link'] = response.meta['link']
@@ -105,9 +105,13 @@ class CellSpider(scrapy.Spider):
             item['if_2017'] = 23.29
             item['source'] = "Cell stem cell"
         item['pub_date'] = tranfrom_date(response.xpath('//meta[contains(@name, "date")]/@content').get())
-        item['abstract'] = handler_abstract(response.xpath('//div[@id="article"]//div[@class="content"]//p/text()').extract()) or\
+        item['abstract'] = handler_abstract(
+            response.xpath('//div[@id="article"]//div[@class="content"]//p/text()').extract()) or \
                            strip_tag(response.xpath('//meta[@name="citation_abstract"]/@content').get()) or ""
         item['doi'] = response.xpath('//meta[@name="citation_doi"]/@content').get()
         item['authors'] = response.xpath('//meta[@name="citation_author"]/@content').extract()
+        item["is_pubmed"] = 0
         # item['AffiliationInfo'] = response.xpath('//meta[@name="citation_author_institution"]').get()
         yield item
+
+
